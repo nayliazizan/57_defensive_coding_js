@@ -8,6 +8,7 @@ STATIC CODE ANALYSIS
 1. first i run eslint . in terminal to find any potential issues. and then i run eslint --fix . to automatically fix most issues found. the balance will be fix manually.
 
 STRICT MODE
+
 2. run npm start to see which errors have been triggered. and one by one i fix and run npm start.
 - i remove the "delete hostname;" in main.js
 - i remove the "delete port;" in main.js
@@ -23,6 +24,7 @@ const filename = path.join(process.cwd(), name);
 5. this time when i enter the input in the form, the website display the file not found.
 
 FIXING VULNERABILITIES IN CALCULATOR
+
 6. the calculator features uses eval to evaluate JS expressions and display result. so i change it to safe-eval. 
 7. first i add "import safeEval from "safe-eval";" at top section of calculator.js.
 8. in calculator_callback function, i change the answer variable from this: 
@@ -31,10 +33,12 @@ to this:
 const answer = safeEval(expression);
 
 FIXING VULNERABILITIES IN LINUX EMULATOR
+
 9. the linux emulator form uses exec. so i change it to execFile.
 10. first change the exec function to execFile at top section of linux.js.
 and then change the method name from exec() to execFile() in linux_callback function.
 
 FIXING VULNERABILITIES IN CONTACT FORM
+
 11. the contact form use some risky regular expressions to validate user input. so i replace all unsafe expressions i found with the regular expression ".*" in formValidator.js.
 
