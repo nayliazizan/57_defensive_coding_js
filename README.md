@@ -17,6 +17,7 @@ STRICT MODE
 3. now run npm start again and test out the form submission. here, i see that when i input the "/proc/cpuinfo" in the form, the website display the content of that file (this is vulnerable)
 
 FIXING FILE SYSTEM VULNERABILITY IN MAIN MENU
+
 4. so i change the filePath to current working directory using path method. from this:
 const filename = name;
 to this:
